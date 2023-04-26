@@ -1,0 +1,28 @@
+name: freezed_state
+description: A new brick created with the Mason CLI.
+
+version: 0.1.0+1
+
+environment:
+  mason: ">=0.1.0-dev.49 <0.1.0"
+
+vars:
+  state_name:
+    type: string
+    description: The Name of State
+    default: ToDo
+    prompt: What is the State name?
+  state_type:
+    type: string
+    description: The Type of State
+    default: ToDo
+    prompt: What is the State type?
+  style_model:
+    type: boolean
+    description: Model single or list.
+    default: false
+    prompt: Do you want to use List?
+#  uses_state_management:
+#    type: boolean
+#    description: generates state
+#    prompt: require state management classes

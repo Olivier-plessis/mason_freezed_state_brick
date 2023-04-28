@@ -20,8 +20,7 @@ void run(HookContext context) async {
 }
 
 Future<void> _runDeleteFileGenerated(HookContext context) async {
-  var result = await Process.run(
-      'rm', ['-rf', (context.vars['state_name'] as String).snakeCase]);
+  var result = await Process.run('rm', ['-rf', (context.vars['state_name'] as String).snakeCase]);
   stdout.write(result.stdout);
   stderr.write(result.stderr);
 }
